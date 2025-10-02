@@ -1,0 +1,298 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brave Things Books Brand Theme - Rich, deep, saturated colors throughout */
+    --background: 44 76% 97%; /* Cream-50 for background */
+    --foreground: 150 80% 15%; /* Rich forest for text */
+
+    --muted: 25 60% 78%; /* Rich earth for muted elements */
+    --muted-foreground: 25 75% 30%; /* Deep earth for muted text */
+
+    --popover: 44 76% 97%; /* Cream-50 */
+    --popover-foreground: 150 80% 15%; /* Rich forest */
+
+    --card: 44 76% 97%; /* Cream-50 */
+    --card-foreground: 150 80% 15%; /* Rich forest */
+
+    --border: 25 55% 68%; /* Rich earth for borders */
+    --input: 25 60% 78%; /* Rich earth for inputs */
+
+    --primary: 150 60% 35%; /* Rich, deep forest green */
+    --primary-foreground: 44 76% 97%; /* Cream-50 */
+
+    --secondary: 45 95% 50%; /* Rich, vibrant golden */
+    --secondary-foreground: 150 80% 15%; /* Rich forest */
+
+    --accent: 25 65% 40%; /* Rich earth for accents */
+    --accent-foreground: 44 76% 97%; /* Cream-50 */
+
+    --destructive: 8 90% 58%; /* Rich coral for destructive */
+    --destructive-foreground: 44 76% 97%; /* Cream-50 */
+
+    --ring: 150 60% 35%; /* Rich forest for focus rings */
+
+    --radius: 0.75rem; /* Slightly more rounded for magical feel */
+
+    /* Chart colors using rich brand palette */
+    --chart-1: 150 60% 35%; /* Rich Forest */
+    --chart-2: 45 95% 50%; /* Rich Golden */
+    --chart-3: 25 65% 40%; /* Rich Earth */
+    --chart-4: 8 90% 58%; /* Rich Coral */
+    --chart-5: 150 50% 78%; /* Forest light */
+
+    /* Sidebar colors - keeping rich throughout */
+    --sidebar-background: 44 76% 97%; /* Cream-50 */
+    --sidebar-foreground: 150 80% 15%; /* Rich forest */
+    --sidebar-primary: 150 60% 35%; /* Rich forest */
+    --sidebar-primary-foreground: 44 76% 97%; /* Cream-50 */
+    --sidebar-accent: 25 60% 78%; /* Rich earth */
+    --sidebar-accent-foreground: 25 75% 30%; /* Deep earth */
+    --sidebar-border: 25 55% 68%; /* Rich earth */
+    --sidebar-ring: 150 60% 35%; /* Rich forest */
+  }
+
+  .dark {
+    /* Dark mode using rich, saturated colors */
+    --background: 150 80% 15%; /* Rich forest dark */
+    --foreground: 44 76% 97%; /* Cream-50 */
+
+    --muted: 25 80% 25%; /* Rich earth dark */
+    --muted-foreground: 44 65% 90%; /* Cream-200 */
+
+    --popover: 150 80% 15%; /* Rich forest dark */
+    --popover-foreground: 44 76% 97%; /* Cream-50 */
+
+    --card: 25 80% 25%; /* Rich earth dark */
+    --card-foreground: 44 76% 97%; /* Cream-50 */
+
+    --border: 25 75% 30%; /* Rich earth border */
+    --input: 25 75% 30%; /* Rich earth input */
+
+    --primary: 45 95% 50%; /* Rich golden for primary in dark */
+    --primary-foreground: 150 80% 15%; /* Rich forest */
+
+    --secondary: 150 65% 30%; /* Rich forest secondary */
+    --secondary-foreground: 44 76% 97%; /* Cream-50 */
+
+    --accent: 25 70% 35%; /* Rich earth accent */
+    --accent-foreground: 44 76% 97%; /* Cream-50 */
+
+    --destructive: 8 90% 58%; /* Rich coral */
+    --destructive-foreground: 44 76% 97%; /* Cream-50 */
+
+    --ring: 45 95% 50%; /* Rich golden for focus rings in dark */
+
+    --chart-1: 45 95% 50%; /* Rich Golden */
+    --chart-2: 150 60% 35%; /* Rich Forest */
+    --chart-3: 25 65% 40%; /* Rich Earth */
+    --chart-4: 8 90% 58%; /* Rich Coral */
+    --chart-5: 150 50% 78%; /* Forest light */
+
+    --sidebar-background: 150 80% 15%; /* Rich forest dark */
+    --sidebar-foreground: 44 76% 97%; /* Cream-50 */
+    --sidebar-primary: 45 95% 50%; /* Rich golden */
+    --sidebar-primary-foreground: 150 80% 15%; /* Rich forest */
+    --sidebar-accent: 25 80% 25%; /* Rich earth dark */
+    --sidebar-accent-foreground: 44 76% 97%; /* Cream-50 */
+    --sidebar-border: 25 75% 30%; /* Rich earth border */
+    --sidebar-ring: 45 95% 50%; /* Rich golden */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Grid Background Pattern - Updated to use rich forest colors */
+.bg-grid-forest {
+  background-image: linear-gradient(
+      rgba(31, 120, 57, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(31, 120, 57, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Brave Things Books Custom Styles - Updated Typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&display=swap');
+
+@layer utilities {
+  /* Rich, saturated gradients using the new color palette */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(150 60% 35%), hsl(45 95% 50%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-coral {
+    background: linear-gradient(135deg, hsl(8 90% 58%), hsl(8 80% 46%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-golden {
+    background: linear-gradient(135deg, hsl(45 95% 50%), hsl(45 85% 40%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-earth {
+    background: linear-gradient(135deg, hsl(25 65% 40%), hsl(25 75% 30%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Rich background gradients */
+  .bg-gradient-warm {
+    background: linear-gradient(135deg, hsl(44 76% 97%) 0%, hsl(25 70% 95%) 100%);
+  }
+
+  .bg-gradient-forest {
+    background: linear-gradient(135deg, hsl(150 60% 35%) 0%, hsl(150 70% 25%) 100%);
+  }
+
+  .bg-gradient-magical {
+    background: linear-gradient(135deg, hsl(44 76% 97%) 0%, hsl(150 60% 95%) 50%, hsl(45 100% 95%) 100%);
+  }
+
+  /* Typography utilities */
+  .font-playful {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-script {
+    font-family: 'Dancing Script', cursive;
+  }
+
+  /* Rich, saturated shadow utilities */
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(31, 120, 57, 0.15);
+  }
+
+  .shadow-glow {
+    box-shadow: 0 0 30px rgba(255, 193, 7, 0.3);
+  }
+
+  .shadow-coral {
+    box-shadow: 0 4px 20px rgba(255, 99, 71, 0.2);
+  }
+
+  .shadow-earth {
+    box-shadow: 0 4px 20px rgba(160, 82, 45, 0.18);
+  }
+
+  /* Nature-inspired decorative elements */
+  .leaf-decoration::before {
+    content: '🌿';
+    opacity: 0.6;
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .sparkle-decoration::after {
+    content: '✨';
+    opacity: 0.7;
+    position: absolute;
+    right: -1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* Custom button styles matching the new brand colors */
+.btn-forest {
+  @apply bg-forest-500 hover:bg-forest-600 text-cream-50 font-medium px-6 py-3 rounded-xl transition-all duration-300 shadow-soft hover:shadow-lg;
+}
+
+.btn-golden {
+  @apply bg-golden-500 hover:bg-golden-600 text-forest-900 font-medium px-6 py-3 rounded-xl transition-all duration-300 shadow-glow hover:shadow-lg;
+}
+
+.btn-earth {
+  @apply bg-earth-500 hover:bg-earth-600 text-cream-50 font-medium px-6 py-3 rounded-xl transition-all duration-300 shadow-earth hover:shadow-lg;
+}
+
+.btn-coral {
+  @apply bg-coral-500 hover:bg-coral-600 text-cream-50 font-medium px-6 py-3 rounded-xl transition-all duration-300 shadow-coral hover:shadow-lg;
+}
+
+/* Book Page Specific Styles */
+
+/* Forest Gradient Background */
+.forest-gradient {
+  background: linear-gradient(135deg, 
+    hsl(150 60% 95%) 0%,
+    hsl(150 55% 88%) 25%,
+    hsl(45 95% 95%) 50%,
+    hsl(150 50% 92%) 75%,
+    hsl(150 60% 85%) 100%);
+}
+
+/* Floating Animation */
+.floating {
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-10px) translateX(5px); }
+}
+
+/* Gentle Bounce Animation */
+.bounce-gentle {
+  animation: bounce-gentle 2s ease-in-out infinite;
+}
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+/* Magical Glow Effect */
+.magical-glow {
+  box-shadow: 0 0 20px rgba(45, 95, 63, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.magical-glow:hover {
+  box-shadow: 0 0 30px rgba(45, 95, 63, 0.5);
+}
+
+/* Enhanced Shadow Utilities - Google-inspired */
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Organic Shape Animations */
+.organic-float {
+  animation: organic-float 15s ease-in-out infinite;
+}
+
+@keyframes organic-float {
+  0%, 100% { 
+    transform: translateY(0px) translateX(0px);
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  33% { 
+    transform: translateY(-20px) translateX(10px);
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+  66% { 
+    transform: translateY(10px) translateX(-10px);
+    border-radius: 70% 30% 60% 40% / 40% 70% 50% 60%;
+  }
+}
